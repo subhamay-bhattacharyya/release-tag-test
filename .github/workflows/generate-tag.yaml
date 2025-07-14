@@ -1,0 +1,12 @@
+name: Generate Release Tag
+run-name: Generate Release Tag in ${{ github.ref_name }} by ${{ github.actor }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-release:
+    name: Setup
+    uses: subhamay-bhattacharyya-gha/create-release-action@feature/GHA-0002-initial-release
+    with:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
