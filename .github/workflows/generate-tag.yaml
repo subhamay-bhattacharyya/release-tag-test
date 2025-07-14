@@ -11,5 +11,4 @@ jobs:
 
     steps:
       - name: Hello
-        run: |
-          echo "Hello"
+        uses: subhamay-bhattacharyya-gha/create-release-tag@feature/GHA-0002-initial-release
