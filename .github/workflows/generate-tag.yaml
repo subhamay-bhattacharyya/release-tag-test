@@ -11,6 +11,6 @@ jobs:
 
     steps:
       - name: Hello
-        uses: subhamay-bhattacharyya-gha/create-release-tag@feature/GHA-0002-initial-release
+        uses: subhamay-bhattacharyya-gha/create-release-action@feature/GHA-0002-initial-release
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
