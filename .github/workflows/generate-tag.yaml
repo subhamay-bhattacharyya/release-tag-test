@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello
+      - name: Release Tag
         uses: subhamay-bhattacharyya-gha/create-release-action@feature/GHA-0002-initial-release
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
