@@ -5,8 +5,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-release:
-    name: Setup
-    uses: subhamay-bhattacharyya-gha/.github/actions/generate-release-tag.yaml@feature/GHA-0002-initial-release
-    with:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+  setup-environments:
+    name: Generate Release Tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello
+        run: |
+          echo "Hello"
