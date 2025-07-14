@@ -7,6 +7,6 @@ on:
 jobs:
   create-release:
     name: Setup
-    uses: subhamay-bhattacharyya-gha/create-release-action@feature/GHA-0002-initial-release
+    uses: subhamay-bhattacharyya-gha/.github/actions/generate-release-tag.yaml@feature/GHA-0002-initial-release
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
