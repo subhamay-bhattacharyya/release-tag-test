@@ -1,0 +1,16 @@
+name: Auto-Publish Release
+
+on:
+  repository_dispatch:
+    types: [publish-release]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish Draft Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Publishing release for tag: ${{ github.event.client_payload.tag }}"
+          gh release edit "${{ github.event.client_payload.tag }}" --draft=false
